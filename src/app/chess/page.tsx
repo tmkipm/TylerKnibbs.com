@@ -761,7 +761,6 @@ const ChessGame: React.FC = () => {
   const moveToNotation = (from: Position, to: Position, piece: Piece, captured?: Piece | null, isCheck: boolean = false, isCheckmate: boolean = false): string => {
     const files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
     const ranks = ['8', '7', '6', '5', '4', '3', '2', '1'];
-    const fromStr = files[from.col] + ranks[from.row];
     const toStr = files[to.col] + ranks[to.row];
     
     // Map pieces to their notation symbols
@@ -1536,7 +1535,7 @@ const ChessGame: React.FC = () => {
         clearTimeout(aiTimeoutRef.current);
       }
     };
-  }, [gameState.currentPlayer, aiConfig.enabled, aiConfig.thinking, gameState.checkmate]);
+  }, [gameState.currentPlayer, aiConfig.enabled, aiConfig.thinking, gameState.checkmate, makeAIMove]);
 
   return (
     <div className="chess-game-container">
