@@ -9,4 +9,16 @@ body {
   flex-direction: column;
 }
 
+/* Debug styles that should be very obvious when they load */
+.css-debug {
+  border: 5px solid red !important;
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
 /* Remove custom html/html.dark rules that might cause issues */
