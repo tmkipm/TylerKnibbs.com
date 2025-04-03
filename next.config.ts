@@ -9,11 +9,6 @@ const nextConfig: NextConfig = {
   typescript: {
     // Do the same for TypeScript errors
     ignoreBuildErrors: true,
-  },
-  output: 'standalone',
-  // Make sure CSS processing is enabled
-  experimental: {
-    forceSwcTransforms: true,
   }
 };
 
